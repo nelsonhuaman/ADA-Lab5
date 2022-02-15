@@ -55,7 +55,7 @@ public class BTree<E extends Comparable<? super E>> implements BTreeInterface<E>
                     found = true;
                     removed = data[i];
                 } else if (found) {
-                    // shift the rest of the keys down
+             
                     data[i - 1] = data[i];
                 }
             }
@@ -72,7 +72,7 @@ public class BTree<E extends Comparable<? super E>> implements BTreeInterface<E>
             }
             E value = data[index];
             for (int i = index + 1; i < kSize; i++) {
-                // shift the rest of the keys down
+                
                 data[i - 1] = data[i];
             }
             kSize--;
@@ -116,7 +116,7 @@ public class BTree<E extends Comparable<? super E>> implements BTreeInterface<E>
                 if (chil[i].equals(child)) {
                     found = true;
                 } else if (found) {
-                    // shift the rest of the keys down
+                    
                     chil[i - 1] = chil[i];
                 }
             }
